@@ -6,11 +6,13 @@ node_modules/
 .env.local
 
 # Fichiers uploadés par les utilisateurs
-media/profile-photos/*
-media/post/*
+media/profile-pictures/*
+media/conversations/*
+media/posts/*
 # Garder les dossiers mais pas leur contenu
-!media/profile-photos/.gitkeep
-!media/post/.gitkeep
+!media/conversations/.gitkeep
+!media/posts/.gitkeep
+!media/profile-pictures/.gitkeep
 
 # Logs
 logs/
