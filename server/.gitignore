@@ -1,0 +1,28 @@
+# Dépendances
+node_modules/
+
+# Variables d'environnement
+.env
+.env.local
+
+# Fichiers uploadés par les utilisateurs
+media/profile-photos/*
+media/post/*
+# Garder les dossiers mais pas leur contenu
+!media/profile-photos/.gitkeep
+!media/post/.gitkeep
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
