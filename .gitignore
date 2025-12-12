@@ -1,0 +1,43 @@
+# Fichiers d'environnement
+.env
+.env.local
+.env.development
+.env.production
+
+# Dépendances
+node_modules/
+client/node_modules/
+server/node_modules/
+
+# Build / production
+build/
+dist/
+client/build/
+
+# Fichiers médias à ne pas suivre
+server/media/profile-pictures/*
+server/media/posts/*
+server/media/conversations/*
+!server/media/profile-pictures/.gitkeep
+!server/media/posts/.gitkeep
+!server/media/conversations/.gitkeep
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+logs/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage / tests
+coverage/
