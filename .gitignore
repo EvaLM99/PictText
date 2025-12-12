@@ -1,0 +1,25 @@
+# Fichiers d'environnement
+.env
+.env.local
+.env.development
+.env.production
+client/.env
+serveur/.env
+
+# Dépendances
+node_modules/
+client/node_modules/
+serveur/node_modules/
+
+# Fichiers de build
+build/
+dist/
+client/build/
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+npm-debug.log*
