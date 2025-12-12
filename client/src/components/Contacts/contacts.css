@@ -1,0 +1,205 @@
+.users {
+    width: 500px;
+    margin:  15px auto;
+    overflow-y: auto;
+}
+
+.search-new-contacts, .friends {
+    width: 600px;
+    box-shadow: 1px 2px 5px var(--secondaryColor);
+    margin:  15px auto;
+    height: 400px;
+}
+
+.search-new-contacts form {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1px solid var(--primaryColor);
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+}
+
+.search-new-contacts .user, .user-left {
+    display: flex;
+    align-items: center;
+    justify-content: start
+}
+
+.search-new-contacts .user button {
+    border: none;
+    background-color: inherit;
+    color: var(--primaryColor);
+    
+}
+
+.friends .user {
+  display: flex;
+  align-items: center;
+}
+
+.user-buttons > * {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.user-buttons {
+    margin-left: auto;
+}
+
+.friends-menu {
+    margin-bottom: 10px;
+    height: 50px;
+    display: flex;
+    justify-content: stretch;
+    border-bottom: 1px solid var(--primaryColor);
+    -webkit-box-shadow: 0 4px 6px -6px #222;
+    -moz-box-shadow: 0 4px 6px -6px #222;
+    box-shadow: 0 4px 6px -6px #222;
+    flex-shrink: 0;
+}
+
+
+.friends-menu .menu-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.friends-menu .menu-item .MuiBadge-root {
+    width: 100%;
+    display: flex;
+}
+
+.friends-menu .menu-item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+
+
+.friends-menu button {
+    height:100%;
+    width: 100%;
+    font-size: 16px;
+    border: none;
+    color: var(--primaryColor);
+    background-color: inherit;
+
+}
+
+.friends-menu button.active {
+    background-color: var(--primaryColor);
+    color: white;
+}
+
+
+.view-profile-cursor:hover {
+    cursor: pointer
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+    .contacts-container {
+        padding: 0 10px;
+    }
+
+    .search-new-contacts,
+    .friends {
+        width: 100%;
+        height: auto;
+        margin: 10px 0;
+    }
+
+    .search-new-contacts form {
+        flex-direction: column;
+        height: auto;
+        padding: 10px;
+        gap: 10px;
+    }
+
+    .users {
+        width: 100%;
+        max-height: 350px;
+        overflow-y: auto;
+        padding: 0 5px;
+    }
+
+    /* Les users s'affichent en colonne sur mobile */
+    .user {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px 0;
+        border-bottom: 1px solid #ddd;
+    }
+
+    .user-left {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .user-buttons button {
+        padding: 8px;
+    }
+
+    /* Menu amis */
+    .friends-menu {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .friends-menu .menu-item {
+        width: 100%;
+    }
+
+    .friends-menu button {
+        width: 100%;
+        font-size: 15px;
+        padding: 12px;
+    }
+}
+
+/* 📱 Très petit écran */
+@media (max-width: 480px) {
+
+    .users {
+        max-height: 300px;
+    }
+
+    .user p {
+        font-size: 14px;
+    }
+
+    .user-left Avatar {
+        width: 32px !important;
+        height: 32px !important;
+    }
+
+    .friends-menu button {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .search-new-contacts,
+    .friends {
+        width: 90%;
+    }
+
+    .users {
+        width: 90%;
+        margin: auto;
+    }
+}

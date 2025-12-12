@@ -1,0 +1,213 @@
+/* -----------------------------
+   Input & labels
+------------------------------ */
+.custom-file-label { 
+    background-color: var(--primaryColor);
+    color: white;
+    border-radius: 10px;
+    padding: 5px 15px;
+    cursor: pointer;
+}
+
+/* -----------------------------
+   Profile photo & cropper
+------------------------------ */
+.profile-photo-container {
+    width: 400px;
+    height: 400px;
+    position: relative; /* pour les boutons cropper absolus */
+    margin: 0 auto;
+}
+
+.profile-photo-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cropper-buttons-container {
+    position: absolute;
+    bottom: 0px; /* juste au-dessus du bas de la photo */
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+    z-index: 10;
+}
+
+.cropper-buttons {
+    color: var(--secondaryColor) !important;
+    border-color: var(--secondaryColor) !important;
+    background-color: rgba(255, 255, 255, 0.7)!important; /* blanc semi-transparent */
+    padding: 0px 14.5px !important;
+}
+
+
+/* -----------------------------
+   Layout: form & sections
+------------------------------ */
+.profile-container form {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;   
+    width: 100%;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    padding: 20px;
+}
+
+.update-profile-photo-infos {
+    display: flex;
+    gap: 100px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* -----------------------------
+   User information section
+------------------------------ */
+.edit-informations {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.change-info, .change-password {
+    width: 300px !important;
+}
+
+.update-profile-button, .update-password-button {
+    margin-top: 20px !important;
+    background-color: var(--primaryColor) !important;
+}
+
+/* -----------------------------
+   Profile placeholder (no photo)
+------------------------------ */
+.profile-placeholder-wrapper {
+    width: 100%;
+    height: 100%;
+    background-color: rgb(213, 213, 213);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.profile-placeholder-head {
+    width: 100%; 
+    height: 100%;
+    background-color: #eeb6da;
+    border-radius: 50%;
+}
+
+
+
+.update-profil-password {
+    display: flex;
+    margin: 20px;
+    gap: 20px;
+}
+
+
+/* -----------------------------
+   📱 Mobile - jusqu'à 768px
+------------------------------ */
+@media (max-width: 768px) {
+
+    .update-profil-password {
+        flex-direction: column;
+        gap: 20px;
+        margin: 10px;
+        align-items: center;
+    }
+
+    .update-profile-photo-infos {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .profile-photo-container {
+        width: 250px;
+        height: 250px;
+    }
+
+    .cropper-buttons {
+        padding: 0px 10px !important;
+        font-size: 0.85em;
+    }
+
+    .edit-informations {
+        width: 100%;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .change-info, .change-password {
+        width: 90% !important;
+    }
+
+    .update-profile-button, .update-password-button {
+        width: 90%;
+        font-size: 0.95em;
+    }
+}
+
+/* -----------------------------
+   📱 Très petit écran - jusqu'à 480px
+------------------------------ */
+@media (max-width: 480px) {
+
+    .profile-photo-container {
+        width: 200px;
+        height: 200px;
+    }
+
+    .cropper-buttons {
+        padding: 0px 8px !important;
+        font-size: 0.8em;
+    }
+
+    .change-info, .change-password {
+        width: 95% !important;
+        font-size: 0.9em;
+    }
+
+    .update-profile-button, .update-password-button {
+        width: 95%;
+        font-size: 0.9em;
+    }
+}
+
+/* -----------------------------
+   📱 Tablette / medium screens - 768px à 1024px
+------------------------------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .update-profil-password {
+        flex-direction: row;
+        gap: 40px;
+        margin: 15px auto;
+        align-items: flex-start;
+    }
+
+    .update-profile-photo-infos {
+        flex-direction: row;
+        gap: 50px;
+        justify-content: center;
+    }
+
+    .profile-photo-container {
+        width: 300px;
+        height: 300px;
+    }
+
+    .change-info, .change-password {
+        width: 80% !important;
+    }
+
+    .update-profile-button, .update-password-button {
+        width: 80%;
+        font-size: 0.95em;
+    }
+}

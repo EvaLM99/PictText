@@ -1,0 +1,108 @@
+.image-post {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+}
+
+.post-content {
+    white-space: pre-wrap; /* garde les retours à la ligne */
+    word-wrap: break-word; /* permet de couper les mots trop longs */
+}
+
+.post-author{
+    color: var(--primaryColor);
+}
+
+
+.post {
+    width: 600px;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 10px;
+    margin: 10px auto;
+    position: relative;
+}
+
+.post-buttons {
+    margin-bottom: 5px;
+}
+
+
+.comment-infos * {
+    margin: 0;
+    text-align: left;
+}
+
+.comment-author {
+    font-weight: 500;
+}
+
+.comment {
+    margin: 10px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 5px;
+}
+
+.comment-form {
+    display: flex;        
+    align-items: flex-end; 
+    margin: 10px;
+    gap: 10px;
+}
+
+.comment {
+    display: flex;
+    justify-content: space-between;
+}
+
+.comment-delete-button, .comment-edit-button, .comment-validate-edit-button, .comment-edit-back-button {
+    background-color: inherit;
+    border: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+.comment-author-buttons {
+    width: 91.96px;
+}
+
+.post-detail-view-back {
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    border: 2px solid var(--primaryColor);
+    border-radius: 5px;
+    background-color: inherit;
+    font-weight: bold;
+}
+
+.post-delete-button {
+    background-color: inherit;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 10px;
+    right: 10px;
+}
+
+.post-time {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    font-style: italic;
+    font-size: smaller;
+}
+
+.view-profile-cursor:hover {
+    cursor: pointer
+}

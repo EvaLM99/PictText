@@ -1,0 +1,183 @@
+/* ---------- STRUCTURE GÉNÉRALE ---------- */
+
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background: rgb(236, 235, 235);
+    border: 1px solid var(--primaryColor);
+    border-radius: 15px;
+    border-top: none;
+    border-left: none;
+    box-shadow: 10px 5px 5px var(--primaryColor);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+
+#header-title {
+    font-size: 22px;
+    color: var(--primaryColor);
+}
+
+/* ---------- NAVIGATION DESKTOP ---------- */
+
+.nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.nav-menu a,
+.nav-menu button {
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--primaryColor);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 5px 0;
+    font-family: inherit;
+}
+
+.nav-menu a:hover,
+.nav-menu button:hover {
+    color: var(--secondaryColor);
+}
+
+.authentication {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+/* ---------- MENU PROFIL ---------- */
+
+.profile-menu-container {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-link {
+    color: var(--primaryColor);
+}
+
+.profile-dropdown {
+    position: absolute;
+    background: rgb(236, 235, 235);
+    list-style: none;
+    padding: 8px 0;
+    margin: 0;
+    top: 120%;
+    right: 0;
+    border-radius: 8px;
+    display: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    min-width: 180px;
+}
+
+.profile-dropdown.open {
+    display: block;
+}
+
+.profile-dropdown li button {
+    width: 100%;
+    text-align: left;
+    padding: 10px 15px;
+}
+
+.profile-dropdown li button:hover {
+    background: rgba(0,0,0,0.05);
+    color: var(--secondaryColor);
+}
+
+/* ---------- BURGER MENU ---------- */
+
+.burger-btn {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--primaryColor);
+    cursor: pointer;
+}
+
+/* ---------- RESPONSIVE MOBILE ---------- */
+
+@media (max-width: 768px) {
+    .burger-btn {
+        display: block;
+    }
+
+    .nav-menu {
+        display: none;
+        z-index: 999;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 70%;
+        height: calc(100vh - 70px);
+        background: rgb(236, 235, 235);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 20px;
+        gap: 20px;
+        transition: right 0.3s ease;
+        border-left: 2px solid var(--primaryColor);
+    }
+
+    .nav-menu.open {
+        display: flex;
+    }
+
+    .profile-menu-container {
+    width: 100%;
+}
+
+    .profile-link {
+        width: 100%;
+        display: block;
+        text-align: left;
+        font-weight: 500;
+        padding: 10px 0;
+        cursor: pointer;
+    }
+
+    .profile-dropdown {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-left: 15px; /* indentation pour différencier du reste */
+        margin-top: 5px;
+    }
+
+    .profile-dropdown li button {
+        width: 100%;
+        text-align: left;
+        padding: 8px 0;
+        background: none;
+        border: none;
+        cursor: pointer;
+        font-family: inherit;
+    }
+
+    .profile-dropdown li button:hover {
+        background: rgba(0,0,0,0.05);
+        color: var(--secondaryColor);
+    }
+
+
+    .authentication {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        align-items: flex-start;
+        padding: 10px 0;
+    }
+
+    .authentication button {
+        width: 100%;
+        text-align: left; 
+    }
+}

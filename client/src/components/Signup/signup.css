@@ -1,0 +1,109 @@
+.signup-wrapper h1  {
+    color: var(--primaryColor);
+}
+
+.signup {
+    background-color: var(--primaryColor) !important;
+}
+
+.signup-wrapper {
+    width: 300px;
+    border: 1px solid var(--primaryColor);
+    margin: 0 auto;
+    box-shadow: 10px 5px 5px var(--primaryColor);
+}
+
+#signupForm {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+#signupForm > *:not(.gender) {
+    width: 200px;
+    margin: 0 auto;
+}
+
+
+.gender {
+    margin: 5px auto !important;
+}
+
+
+/* 📱 Mobile - écran jusqu'à 768px */
+@media (max-width: 768px) {
+    .signup-wrapper {
+        width: calc(100% - 20px);
+        max-width: calc(100% - 20px);
+        margin: 20px auto;
+        padding: 15px;
+        box-sizing: border-box;
+        box-shadow: none;
+    }
+
+    .signup-wrapper h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    #signupForm {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #signupForm > *:not(.gender) {
+        width: 100%;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .gender {
+        margin: 0 auto !important;
+        width: 100%;
+    }
+
+    .signup {
+        width: 100%;
+        font-size: 0.95em;
+    }
+}
+
+/* 📱 Très petit écran - jusqu'à 480px */
+@media (max-width: 480px) {
+    .signup-wrapper {
+        width: calc(100% - 15px);
+        padding: 10px;
+    }
+
+    .signup-wrapper h1 {
+        font-size: 1.3em;
+    }
+
+    .signup {
+        font-size: 0.9em;
+    }
+
+    #signupForm > *:not(.gender) {
+        font-size: 0.9em;
+    }
+
+    .gender {
+        font-size: 0.9em;
+    }
+}
+
+/* 📱 Tablette / medium screens - entre 768px et 1024px */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .signup-wrapper {
+        width: 90%;
+        max-width: 90%;
+        margin: 20px auto;
+        padding: 15px;
+    }
+
+    #signupForm > *:not(.gender) {
+        width: 100%;
+    }
+}

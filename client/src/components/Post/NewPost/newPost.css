@@ -1,0 +1,132 @@
+.post-container {
+    position: relative;
+    width: 600px; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem; 
+    box-shadow: 1px 2px 5px var(--secondaryColor);
+    border-radius: 10px;
+    margin: 5px auto;
+    padding: 5px;
+    box-sizing: border-box;
+}
+
+/* champ fichier (invisible) */
+.input-picture-post {
+    display: none; 
+}
+
+/* label pour déclencher le fichier */
+.input-picture-post-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px;
+    background: var(--primaryColor);
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: all .3s;
+    width: 200px;
+}
+
+.input-picture-post-trigger:hover,
+.input-picture-post-trigger:focus {
+    background: #5a345e;
+    color: var(--primaryColor);
+}
+
+/* retour visuel du fichier */
+.file-return {
+    font-style: italic;
+    font-size: .9em;
+    font-weight: bold;
+}
+
+/* bouton publier */
+.button-post {
+    align-self: center;
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+    .post-container {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        box-shadow: none;
+    }
+
+    .post-container .MuiTextField-root {
+        width: 100% !important;
+    }
+
+    .input-picture-post-trigger {
+        width: 100%;
+        font-size: 0.9em;
+        padding: 12px;
+    }
+
+    .file-return {
+        font-size: 0.8em;
+        text-align: center;
+    }
+
+    .button-post {
+        width: 100%;
+        padding: 12px;
+        font-size: 1em;
+    }
+}
+
+/* 📱 Très petit écran */
+@media (max-width: 480px) {
+
+    .post-container {
+        padding: 5px;
+        margin: 5px 0;
+    }
+
+    .post-container .MuiTextField-root {
+        font-size: 0.9em;
+    }
+
+    .input-picture-post-trigger {
+        font-size: 0.8em;
+        padding: 10px;
+    }
+
+    .file-return {
+        font-size: 0.75em;
+    }
+
+    .button-post {
+        font-size: 0.9em;
+        padding: 10px;
+    }
+}
+
+/* 📱 Tablette / medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .post-container {
+        width: 90%;
+    }
+
+    .post-container .MuiTextField-root {
+        width: 100% !important;
+    }
+
+    .input-picture-post-trigger {
+        width: 50%;
+        font-size: 0.95em;
+    }
+
+    .button-post {
+        width: 50%;
+    }
+}

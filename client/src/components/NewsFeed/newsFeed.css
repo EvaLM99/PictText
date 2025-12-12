@@ -1,0 +1,154 @@
+.post-content {
+    white-space: pre-wrap; /* garde les retours à la ligne */
+    word-wrap: break-word; /* permet de couper les mots trop longs */
+}
+
+.post-author{
+    color: var(--primaryColor);
+}
+
+
+.post {
+    width: 600px;
+    max-width: 100%;
+    border: 1px solid var(--secondaryColor);
+    border-radius: 10px;
+    margin-bottom: 5px;
+    position: relative;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.image-post {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.post:hover{
+    background-color: rgb(232, 232, 232);
+}
+
+.posts {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    width: 100%;
+    max-width: 100%;
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.post-buttons {
+    margin-bottom: 5px;
+}
+
+.post-time {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    top: 10px;
+    left: 10px;
+    font-style: italic;
+    font-size: smaller;
+}
+
+.view-profile-cursor:hover {
+    cursor: pointer
+}
+
+
+/* 📱 Mobile */
+@media (max-width: 768px) {
+
+    .posts {
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .post {
+        width: 100%;
+        max-width: 100%;
+        padding: 8px;
+    }
+
+    .image-post {
+        width: 100%;
+        max-width: 100%;
+        max-height: 300px;
+        object-fit: cover;
+    }
+
+    .post-content {
+        font-size: 0.9em;
+    }
+
+    .post-buttons {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .button-post {
+        width: 100%;
+        font-size: 0.9em;
+    }
+
+    .post-time {
+        font-size: 0.8em;
+    }
+
+    .post-author {
+        font-size: 1em;
+    }
+}
+
+/* 📱 Très petit écran */
+@media (max-width: 480px) {
+
+    .image-post {
+        max-height: 250px;
+    }
+
+    .post-content {
+        font-size: 0.85em;
+    }
+
+    .post-time {
+        font-size: 0.75em;
+    }
+
+    .post-buttons {
+        gap: 3px;
+    }
+
+    .button-post {
+        font-size: 0.85em;
+        padding: 8px;
+    }
+
+    .post-author {
+        font-size: 0.95em;
+    }
+}
+
+/* 📱 Tablette / medium screens */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .posts {
+        width: 90%;
+        margin: auto;
+    }
+
+    .post {
+        width: 100%;
+    }
+
+    .image-post {
+        width: 100%;
+    }
+}

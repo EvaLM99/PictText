@@ -1,0 +1,167 @@
+
+.profile-data {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.profile-photo-image {
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+}
+
+
+.profile-informations {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    gap: 0;
+    margin: 0;
+}
+
+.profile-informations > * {
+    margin: 0;
+    padding: 0;
+}
+
+
+.separator {
+    height: 1px;
+    width: 1000px;
+    background-color: var(--secondaryColor);
+    margin: 20px auto;
+}
+
+.profile-name {
+    color: var(--primaryColor)
+}
+
+.profile-informations > .friends-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0;
+    padding: 0;
+    border: none;
+    background: none;
+    font: inherit;
+    color: inherit;
+    cursor: pointer;
+    text-align: left;
+}
+
+.profile-informations > .friends-button:hover {
+    color: var(--secondaryColor)
+}
+
+
+.profile-informations p,
+.profile-informations .friends-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0.2em 0;
+}
+
+
+/* -----------------------------
+   📱 Mobile - jusqu'à 768px
+------------------------------ */
+@media (max-width: 768px) {
+
+    .profile-data {
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .profile-photo-image {
+        width: 150px;
+        height: 150px;
+    }
+
+    .profile-informations {
+        align-items: center;
+        text-align: center;
+        gap: 5px;
+    }
+
+    .profile-informations > .friends-button {
+        width: auto;
+    }
+
+    .separator {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
+
+/* -----------------------------
+   📱 Très petit écran - jusqu'à 480px
+------------------------------ */
+@media (max-width: 480px) {
+
+    .profile-photo-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .profile-informations {
+        gap: 3px;
+    }
+
+    .profile-informations p,
+    .profile-informations .friends-button {
+        font-size: 0.85em;
+        gap: 3px;
+    }
+
+    .separator {
+        width: 95%;
+        margin: 10px auto;
+    }
+}
+
+/* -----------------------------
+   📱 Tablette / medium screens - 768px à 1024px
+------------------------------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+
+    .profile-data {
+        flex-direction: row;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 20px;
+    }
+
+    .profile-photo-image {
+        width: 180px;
+        height: 180px;
+    }
+
+    .profile-informations {
+        gap: 5px;
+    }
+
+    .separator {
+        width: 90%;
+        margin: 15px auto;
+    }
+}
+
+/* -----------------------------
+   Ajustements pour boutons et icônes
+------------------------------ */
+.profile-informations > .friends-button:hover {
+    color: var(--secondaryColor);
+}
+
+.profile-informations p,
+.profile-informations .friends-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 0.2em 0;
+}
